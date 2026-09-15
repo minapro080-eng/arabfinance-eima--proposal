@@ -11,7 +11,7 @@ var CONFIG = {
   // YouTube video ID from https://youtu.be/M_t1wbjdISg
   YOUTUBE_ID: 'M_t1wbjdISg',
   // WhatsApp number in international format, no + or spaces
-  WHATSAPP_NUMBER: '201012938901',
+  WHATSAPP_NUMBER: '201278130940',
   WHATSAPP_MESSAGE: "Hi Arab Finance, I'd like to discuss the EIMA partnership proposal"
 };
 
