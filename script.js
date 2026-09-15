@@ -11,7 +11,7 @@ var CONFIG = {
   // YouTube video ID from https://youtu.be/M_t1wbjdISg
   YOUTUBE_ID: 'M_t1wbjdISg',
   // WhatsApp number in international format, no + or spaces
-  WHATSAPP_NUMBER: '201000000000',
+  WHATSAPP_NUMBER: '201012938901',
   WHATSAPP_MESSAGE: "Hi Arab Finance, I'd like to discuss the EIMA partnership proposal"
 };
 
@@ -100,15 +100,22 @@ document.addEventListener('DOMContentLoaded', function () {
   var playInlineBtn = document.getElementById('playInlineBtn');
 
   if (videoThumb) {
-    // Try the high-res thumbnail first, fall back to a smaller one,
-    // then fall back to the plain gradient card (no image) on failure.
+    // NOTE: maxresdefault.jpg is only generated for videos uploaded in HD.
+    // When it doesn't exist, YouTube does NOT return a 404 — it returns a
+    // tiny 120x90 grey placeholder image with a normal 200 OK, so a plain
+    // "error" listener never fires. hqdefault/mqdefault/sddefault are far
+    // more reliably generated for every public video, so we try those
+    // first and only fall back to the plain gradient card if literally
+    // nothing usable loads.
     var thumbSources = [
-      'https://img.youtube.com/vi/' + CONFIG.YOUTUBE_ID + '/maxresdefault.jpg',
-      'https://img.youtube.com/vi/' + CONFIG.YOUTUBE_ID + '/hqdefault.jpg'
+      'https://img.youtube.com/vi/' + CONFIG.YOUTUBE_ID + '/hqdefault.jpg',
+      'https://img.youtube.com/vi/' + CONFIG.YOUTUBE_ID + '/mqdefault.jpg',
+      'https://img.youtube.com/vi/' + CONFIG.YOUTUBE_ID + '/sddefault.jpg',
+      'https://img.youtube.com/vi/' + CONFIG.YOUTUBE_ID + '/0.jpg'
     ];
     var thumbAttempt = 0;
 
-    videoThumb.addEventListener('error', function () {
+    function nextThumbSource() {
       thumbAttempt++;
       if (thumbAttempt < thumbSources.length) {
         videoThumb.src = thumbSources[thumbAttempt];
@@ -116,6 +123,16 @@ document.addEventListener('DOMContentLoaded', function () {
         // No thumbnail could load — hide the <img> so the CSS
         // gradient background on .video-card__frame shows instead.
         videoThumb.style.display = 'none';
+      }
+    }
+
+    videoThumb.addEventListener('error', nextThumbSource);
+
+    // Guards against YouTube's fake-success placeholder: it always comes
+    // back at exactly 120x90, so treat that as a failure too.
+    videoThumb.addEventListener('load', function () {
+      if (videoThumb.naturalWidth <= 120) {
+        nextThumbSource();
       }
     });
 
