@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Arab Finance × EIMA — Strategic Partnership Proposal</title>
+<meta name="description" content="Strategic partnership proposal from Arab Finance — bringing trusted investment fund intelligence to every investor.">
+
+<!-- EDITABLE: browser tab icon -->
+<link rel="icon" href="logo.png" type="image/png">
+
+<!-- Fonts: Inter (primary) + Cairo / IBM Plex Sans Arabic (Arabic support) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- IMPORTANT: this must be a RELATIVE path so it works after deployment -->
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============================================================
+  NAVIGATION BAR
+  EDITABLE: nav links, logo, "Book a Call" CTA text/link
+============================================================= -->
+<header class="navbar" id="navbar">
+  <div class="container navbar__inner">
+    <a href="#top" class="navbar__logo">
+      <img src="logo.png" alt="Arab Finance logo">
+    </a>
+
+    <nav class="navbar__links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#video">Overview</a>
+      <a href="#proposal">Proposal</a>
+      <a href="#packages">Packages</a>
+      <a href="#benefits">Benefits</a>
+      <a href="#timeline">Timeline</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+
+    <!-- EDITABLE: primary header CTA -->
+    <a href="#contact" class="btn btn--primary navbar__cta">Book a Call</a>
+
+    <button class="navbar__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============================================================
+    HERO SECTION — premium blue gradient
+    EDITABLE: client name, project title, intro copy
+  ============================================================= -->
+  <section class="hero">
+    <div class="hero__pattern" aria-hidden="true"></div>
+    <div class="container hero__inner">
+      <div class="hero__logo-badge">
+        <img src="logo.png" alt="Arab Finance logo" class="hero__logo">
+      </div>
+
+      <span class="tag tag--on-dark">Strategic Partnership Proposal</span>
+
+      <!-- EDITABLE: Client name -->
+      <h1 class="hero__title">
+        Prepared exclusively for <span class="text-highlight" data-editable="client-name">EIMA</span>
+      </h1>
+
+      <!-- EDITABLE: Project title -->
+      <p class="hero__subtitle" data-editable="project-title">
+        The EIMA Investment Hub — Bringing Trusted Fund Intelligence to Every Investor
+      </p>
+
+      <!-- EDITABLE: Short intro paragraph -->
+      <p class="hero__text" data-editable="intro-text">
+        Arab Finance proposes a strategic collaboration to feature EIMA's approved investment fund
+        reports on Egypt's leading financial and economic information platform — turning static
+        reports into a searchable, discoverable, and premium digital experience for investors.
+      </p>
+
+      <div class="hero__actions">
+        <a href="#packages" class="btn btn--white">View Subscription Packages</a>
+        <a href="#proposal" class="btn btn--outline-light">Read Full Proposal</a>
+      </div>
+
+      <div class="hero__stats">
+        <div class="hero__stat">
+          <span class="hero__stat-number">224</span>
+          <span class="hero__stat-label">Investment Funds Tracked</span>
+        </div>
+        <div class="hero__stat">
+          <span class="hero__stat-number">EGP 470.9bn</span>
+          <span class="hero__stat-label">Total Net Assets Covered</span>
+        </div>
+        <div class="hero__stat">
+          <span class="hero__stat-number">+14.7%</span>
+          <span class="hero__stat-label">YoY Net Asset Growth</span>
+        </div>
+        <div class="hero__stat">
+          <span class="hero__stat-number">1</span>
+          <span class="hero__stat-label">Unified Digital Platform</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+    ABOUT
+  ============================================================= -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-heading">
+        <span class="tag">About the Opportunity</span>
+        <h2>From Trusted Reports to a Digital Experience</h2>
+        <p>EIMA provides the trusted investment-management information. Arab Finance provides the
+          modern digital platform, technology, and distribution to bring it closer to every investor.</p>
+      </div>
+
+      <div class="about__grid">
+        <div class="about__card">
+          <div class="about__icon">🔍</div>
+          <h3>Discover</h3>
+          <p>A searchable, structured home for EIMA's fund reports — instead of a static PDF download.</p>
+        </div>
+        <div class="about__card">
+          <div class="about__icon">📊</div>
+          <h3>Compare &amp; Analyze</h3>
+          <p>Present NAV, historical performance, fund ranking, and returns — all in one clear view.</p>
+        </div>
+        <div class="about__card">
+          <div class="about__icon">🌐</div>
+          <h3>Amplify</h3>
+          <p>Distributed across Arab Finance's website, newsletters, social channels, and Arab Finance TV.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+    VIDEO SECTION
+    EDITABLE: change YOUTUBE_ID in js/script.js to swap the video
+  ============================================================= -->
+  <section class="video-section" id="video">
+    <div class="container">
+      <div class="section-heading">
+        <span class="tag">Project Overview</span>
+        <h2>See the Vision in Action</h2>
+        <p>A short walkthrough of how EIMA's reports come to life on the new Arab Finance platform.</p>
+      </div>
+
+      <div class="video-card" id="videoCard">
+        <!-- Thumbnail is loaded by script.js; play button swaps it for the live embed on click.
+             If the thumbnail image itself fails to load, script.js applies a gradient fallback
+             so the card is always polished — never a broken image or error message. -->
+        <div class="video-card__frame" id="videoFrame">
+          <img class="video-card__thumb" id="videoThumb" alt="Project overview video thumbnail">
+          <button class="video-card__play" id="playBtn" type="button" aria-label="Play video">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="video-actions">
+        <button class="btn btn--primary" id="playInlineBtn" type="button">Play Video</button>
+        <!-- EDITABLE: always-reliable link straight to YouTube -->
+        <a href="https://youtu.be/M_t1wbjdISg" target="_blank" rel="noopener" class="btn btn--outline" id="watchOnYoutubeBtn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21.6 7.2s-.21-1.51-.87-2.17c-.83-.87-1.76-.87-2.19-.92C15.54 4 12 4 12 4h-.01s-3.53 0-6.53.11c-.43.05-1.36.05-2.19.92-.66.66-.87 2.17-.87 2.17S2.18 9 2.18 10.8v1.4c0 1.8.22 3.6.22 3.6s.21 1.51.87 2.17c.83.87 1.92.84 2.41.93 1.75.17 7.32.22 7.32.22s3.54 0 6.54-.12c.43-.05 1.36-.05 2.19-.92.66-.66.87-2.17.87-2.17s.22-1.8.22-3.6v-1.4c0-1.8-.22-3.6-.22-3.6zM9.75 14.85V8.75l5.75 3.05-5.75 3.05z" fill="currentColor"/></svg>
+          Watch the Video
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+    PDF PROPOSAL SECTION — premium document preview card
+    EDITABLE: swap proposal.pdf for your own file
+  ============================================================= -->
+  <section class="pdf-section" id="proposal">
+    <div class="container">
+      <div class="section-heading">
+        <span class="tag">Full Proposal Document</span>
+        <h2>Read the Complete Strategic Partnership Proposal</h2>
+        <p>Download the full proposal document for offline reading, internal review, and sharing.</p>
+      </div>
+
+      <div class="doc-card">
+        <div class="doc-card__icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M14 2v6h6" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8 13h8M8 17h8M8 9h3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </div>
+        <div class="doc-card__info">
+          <!-- EDITABLE: document title & description -->
+          <h3 class="doc-card__title">Arab Finance × EIMA — Strategic Partnership Proposal</h3>
+          <p class="doc-card__desc">A full overview of the proposed collaboration, the EIMA Investment Hub concept, subscription model, partnership framework, and next steps.</p>
+          <!-- EDITABLE: file size placeholder — update if you replace the PDF -->
+          <span class="doc-card__meta">PDF Document · 0.5 MB · 28 pages</span>
+        </div>
+        <div class="doc-card__actions">
+          <!-- EDITABLE: points to proposal.pdf -->
+          <a href="proposal.pdf" download class="btn btn--primary" id="downloadPdfBtn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v12m0 0-4-4m4 4 4-4M5 21h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Download Full Proposal
+          </a>
+          <a href="proposal.pdf" target="_blank" rel="noopener" class="btn btn--outline">View in Browser</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+    SUBSCRIPTION PACKAGES
+    EDITABLE: prices, features, CTA links — all marked below
+  ============================================================= -->
+  <section class="packages" id="packages">
+    <div class="container">
+      <div class="section-heading">
+        <span class="tag">Subscription Packages</span>
+        <h2>Choose the Plan That Fits Your Needs</h2>
+        <p>Every plan includes full access to EIMA's fund intelligence — updated continuously on the Arab Finance platform.</p>
+      </div>
+
+      <div class="packages__grid">
+
+        <!-- MONTHLY PACKAGE -->
+        <div class="package-card">
+          <h3 class="package-card__name">Monthly Subscription</h3>
+          <p class="package-card__desc">Flexible month-to-month access.</p>
+          <div class="package-card__price">
+            <!-- EDITABLE PRICE -->
+            <span class="currency">EGP</span>
+            <span class="amount" data-editable="price-monthly">400</span>
+            <span class="period">/ month</span>
+          </div>
+          <ul class="package-card__features">
+            <li>Present NAV</li>
+            <li>Historical NAV</li>
+            <li>Fund Ranking</li>
+            <li>Return</li>
+          </ul>
+          <!-- EDITABLE: delivery timeline text -->
+          <p class="package-card__delivery">Access activated within 24 hours of payment</p>
+          <!-- EDITABLE CTA LINK -->
+          <a href="#contact" class="btn btn--outline package-card__cta">Subscribe Now</a>
+        </div>
+
+        <!-- ANNUAL PACKAGE — BEST VALUE -->
+        <div class="package-card package-card--featured">
+          <span class="package-card__badge">Best Value</span>
+          <h3 class="package-card__name">Annual Subscription</h3>
+          <p class="package-card__desc">Save the most with a full year of access.</p>
+          <div class="package-card__price">
+            <!-- EDITABLE PRICE -->
+            <span class="currency">EGP</span>
+            <span class="amount" data-editable="price-annual">4,080</span>
+            <span class="period">/ year</span>
+          </div>
+          <p class="package-card__savings">Equivalent to EGP 340/month — save 15% vs. monthly</p>
+          <ul class="package-card__features">
+            <li>Present NAV</li>
+            <li>Historical NAV</li>
+            <li>Fund Ranking</li>
+            <li>Return</li>
+          </ul>
+          <p class="package-card__delivery">Access activated within 24 hours of payment</p>
+          <a href="#contact" class="btn btn--primary package-card__cta">Subscribe Now</a>
+        </div>
+
+        <!-- THREE-MONTH PACKAGE -->
+        <div class="package-card">
+          <h3 class="package-card__name">Three-Month Subscription</h3>
+          <p class="package-card__desc">A quarter of uninterrupted access.</p>
+          <div class="package-card__price">
+            <!-- EDITABLE PRICE -->
+            <span class="currency">EGP</span>
+            <span class="amount" data-editable="price-quarterly">1,080</span>
+            <span class="period">/ 3 months</span>
+          </div>
+          <ul class="package-card__features">
+            <li>Present NAV</li>
+            <li>Historical NAV</li>
+            <li>Fund Ranking</li>
+            <li>Return</li>
+          </ul>
+          <p class="package-card__delivery">Access activated within 24 hours of payment</p>
+          <a href="#contact" class="btn btn--outline package-card__cta">Subscribe Now</a>
+        </div>
+
+      </div>
+
+      <p class="packages__note">All prices are in Egyptian Pounds (EGP) and exclusive of applicable taxes. Custom enterprise and institutional pricing available on request — <a href="#contact">contact us</a>.</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+    BENEFITS SECTION
+  ============================================================= -->
+  <section class="benefits" id="benefits">
+    <div class="container">
+      <div class="section-heading">
+        <span class="tag">What EIMA Gains</span>
+        <h2>The Value of the Partnership</h2>
+        <p>Beyond distribution — a stronger digital presence and a better experience for every investor.</p>
+      </div>
+
+      <div class="benefits__grid">
+        <div class="benefit-card">
+          <div class="benefit-card__icon">📈</div>
+          <h3>Greater Visibility</h3>
+          <p>Reach investors beyond EIMA's existing digital channels.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-card__icon">🧭</div>
+          <h3>Wider Investor Access</h3>
+          <p>Make investment-management information easier to discover.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-card__icon">💎</div>
+          <h3>Stronger Digital Presence</h3>
+          <p>Give EIMA's reports a modern, premium digital presentation.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-card__icon">🎓</div>
+          <h3>Investor Education</h3>
+          <p>Help more investors understand investment funds and performance.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-card__icon">🗂️</div>
+          <h3>Long-Term Digital Archive</h3>
+          <p>A structured, searchable history of EIMA reports over time.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-card__icon">🤝</div>
+          <h3>Industry Awareness</h3>
+          <p>Increase visibility of Egypt's investment-management sector.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+    TIMELINE / WORKFLOW SECTION
+    EDITABLE: phase names, durations, descriptions
+  ============================================================= -->
+  <section class="timeline" id="timeline">
+    <div class="container">
+      <div class="section-heading">
+        <span class="tag">How We'll Work Together</span>
+        <h2>Project Timeline</h2>
+        <p>A clear, concise path from agreement to launch.</p>
+      </div>
+
+      <div class="timeline__list">
+        <div class="timeline__item">
+          <div class="timeline__marker">1</div>
+          <div class="timeline__content">
+            <h3>Discovery &amp; Agreement</h3>
+            <span class="timeline__duration">Week 1</span>
+            <p>Align on content scope, publishing rights, attribution, and the partnership framework.</p>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__marker">2</div>
+          <div class="timeline__content">
+            <h3>Design &amp; Structure</h3>
+            <span class="timeline__duration">Weeks 2–3</span>
+            <p>Design the dedicated EIMA Investment Hub section, fund directory, and report layouts.</p>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__marker">3</div>
+          <div class="timeline__content">
+            <h3>Development &amp; Integration</h3>
+            <span class="timeline__duration">Weeks 4–6</span>
+            <p>Build the searchable archive, fund performance pages, and subscription access system.</p>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__marker">4</div>
+          <div class="timeline__content">
+            <h3>Review &amp; Testing</h3>
+            <span class="timeline__duration">Week 7</span>
+            <p>Joint QA review with EIMA to confirm data accuracy and presentation before launch.</p>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__marker">5</div>
+          <div class="timeline__content">
+            <h3>Launch &amp; Promotion</h3>
+            <span class="timeline__duration">Week 8</span>
+            <p>Go live across Arab Finance's website, newsletters, and social channels.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+    FAQ SECTION
+    EDITABLE: questions and answers
+  ============================================================= -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="section-heading">
+        <span class="tag">Frequently Asked Questions</span>
+        <h2>Common Questions</h2>
+      </div>
+
+      <div class="faq__list">
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">
+            What data is included in each subscription package?
+            <span class="faq__icon"></span>
+          </button>
+          <div class="faq__answer">
+            <p>Every package — Monthly, Three-Month, and Annual — includes full access to Present NAV, Historical NAV, Fund Ranking, and Return data for all tracked investment funds.</p>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">
+            How often is the fund data updated?
+            <span class="faq__icon"></span>
+          </button>
+          <div class="faq__answer">
+            <p>Fund data is refreshed on a regular basis in line with EIMA's official reporting schedule, so figures on the platform always reflect the latest approved reports.</p>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">
+            Can we upgrade or downgrade our subscription later?
+            <span class="faq__icon"></span>
+          </button>
+          <div class="faq__answer">
+            <p>Yes. You can switch between Monthly, Three-Month, and Annual plans at any time — any remaining balance is prorated toward your new plan.</p>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">
+            What payment methods are accepted?
+            <span class="faq__icon"></span>
+          </button>
+          <div class="faq__answer">
+            <p>We accept bank transfer, major credit/debit cards, and mobile wallets. Contact our team for institutional invoicing options.</p>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">
+            Is there a free trial available?
+            <span class="faq__icon"></span>
+          </button>
+          <div class="faq__answer">
+            <p>Yes — reach out via WhatsApp or the contact form below and our team will be happy to arrange a guided demo of the platform.</p>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">
+            Who do I contact for support?
+            <span class="faq__icon"></span>
+          </button>
+          <div class="faq__answer">
+            <p>Our support team is available via email, phone, or WhatsApp — see the contact details in the footer below.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+    FOOTER / CONTACT
+    EDITABLE: contact details, social links, address
+  ============================================================= -->
+  <footer class="footer" id="contact">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <img src="logo.png" alt="Arab Finance logo" class="footer__logo">
+        <p>Egypt's Financial &amp; Economic Information Platform.</p>
+      </div>
+
+      <div class="footer__col">
+        <h4>Contact</h4>
+        <!-- EDITABLE CONTACT DETAILS -->
+        <p><a href="mailto:info@arabfinance.com">info@arabfinance.com</a></p>
+        <p><a href="tel:+201000000000">+20 100 000 0000</a></p>
+        <p>Cairo, Egypt</p>
+      </div>
+
+      <div class="footer__col">
+        <h4>Quick Links</h4>
+        <p><a href="#packages">Subscription Packages</a></p>
+        <p><a href="#proposal">Full Proposal</a></p>
+        <p><a href="#faq">FAQ</a></p>
+      </div>
+
+      <div class="footer__col">
+        <h4>Follow Us</h4>
+        <!-- EDITABLE SOCIAL LINKS -->
+        <div class="footer__socials">
+          <a href="https://linkedin.com/company/arabfinance" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+          <a href="https://facebook.com/arabfinance" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+          <a href="https://x.com/arabfinance" target="_blank" rel="noopener" aria-label="X / Twitter">x</a>
+          <a href="https://instagram.com/arabfinance" target="_blank" rel="noopener" aria-label="Instagram">ig</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <p>&copy; <span id="year"></span> Arab Finance. All rights reserved.</p>
+    </div>
+  </footer>
+
+</main>
+
+<!-- ============================================================
+  STICKY WHATSAPP CTA
+  EDITABLE: replace the phone number in js/script.js (WHATSAPP_NUMBER)
+============================================================= -->
+<a href="#" class="sticky-cta" id="whatsappCta" target="_blank" rel="noopener" aria-label="Contact us on WhatsApp">
+  <svg width="26" height="26" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 1.9 6.5L4 29l7.7-1.8c1.9 1 4.1 1.6 6.3 1.6 6.6 0 12-5.4 12-12S22.6 3 16 3z" fill="#25D366"/><path d="M22.4 18.9c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.1-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-1.4-.6-2.7-1.5-3.7-2.9-.3-.4 0-.4.2-.6.2-.2.4-.5.6-.7.2-.2.2-.4.1-.7-.1-.3-.9-2.2-1.1-2.6-.2-.4-.4-.3-.6-.3h-.6c-.2 0-.5.1-.7.3-.2.2-1 1-1 2.4s1 2.8 1.1 3c.1.2 1.9 3 4.7 4.1 2.8 1.1 2.8.7 3.3.7.5 0 1.6-.6 1.8-1.2.2-.6.2-1.1.2-1.2 0-.1-.1-.2-.4-.4z" fill="#fff"/></svg>
+  <span>Contact Us on WhatsApp</span>
+</a>
+
+<!-- IMPORTANT: relative path so it works after deployment -->
+<script src="script.js"></script>
+</body>
+</html>
